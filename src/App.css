@@ -1,0 +1,49 @@
+body{
+    /* font-size: 1.40rem; */
+}
+
+/* searchbar */
+.searchBar{
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding:15px 10px;
+}
+
+.searchBar input{
+    padding: 5px 180px;
+   
+}
+button{
+    padding: 5px 5px;
+}
+
+.login{
+    margin-right: 60px;
+}
+.logo{
+    margin-left: 60px;
+}
+/* navigation */
+ul{
+    list-style: none;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    border-top: 0.1em solid lightgray;
+    margin-top: 51px;
+}
+
+.postSection{
+    grid-column-start: 3;
+}
+.sideBar{
+     grid-column-start: 1;
+    grid-column-end:3 ;
+    border-right: 0.1em solid lightgrey;
+    line-height: 3;
+}
+
