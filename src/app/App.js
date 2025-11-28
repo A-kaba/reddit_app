@@ -1,5 +1,5 @@
 import {createBrowserRouter, createRoutesFromElements,RouterProvider,Route} from 'react-router-dom';
-import Root from '../components/Root';
+import Root from '../Root';
 import Reddits from '../features/reddit/Reddits'
 import '../App.css';
 function App() {

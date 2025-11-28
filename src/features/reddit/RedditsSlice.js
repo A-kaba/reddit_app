@@ -1,9 +1,8 @@
 import {createSlice, createAsyncThunk} from '@reduxjs/toolkit';
 
 //fetch data using thunk
-
 export const loadingReddit = createAsyncThunk('reddits/getReddits',async()=>{
-    const response =  await fetch('https://api.reddit.com/r/funny/top/?t=5');
+    const response =  await fetch('https://jsonplaceholder.typicode.com/users');
 
     const json = await response.json();
     return json.data.children;
@@ -27,10 +26,9 @@ const redditsSlice = createSlice({
             state.isLoading = true;
             state.hasError = false;
         }).addCase(loadingReddit.fulfilled, (state, action)=>{
-            state.blogs = action.payload
             state.isLoading = false;
             state.hasError = false;
-          
+            state.blogs = action.payload
         }).addCase(loadingReddit.rejected, (state, action)=>{
             state.isLoading = false;
             state.hasError = true

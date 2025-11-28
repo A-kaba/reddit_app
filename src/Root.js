@@ -1,7 +1,8 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import SearchForm from './SearchForm';
-import '../App.css';
+import SearchForm from './components/SearchForm';
+import './App.css';
+
 
 export const ROUTS = 
 {
@@ -14,7 +15,7 @@ export const ROUTS =
 const Root = () => {
 
     return (
-        <div className='container'>
+        <div className='rootContainer'>
             <div className='searchBar'>
                 <div className='logo'>logo</div>
                 <div className='searchForm'>
@@ -31,24 +32,32 @@ const Root = () => {
             <div className='sideBar'>
 
                 <ul>
-                    <li><a href={ROUTS.about}>About</a></li>
-                    <li><a href={ROUTS.doc}>Doc</a></li>
-                    <li><a href={ROUTS.comments}>Comments</a></li>
-                    <li><a href={ROUTS.logIn}>LogIn</a></li>
+                    <li>
+                        <p className="material-symbols-outlined">home</p>
+                        <a href={ROUTS.about}>Home</a>
+                    </li>
+                   
+            
+                    <li>
+                        <a href={ROUTS.doc}>Popular</a>
+                    </li>
+                    <li><a href={ROUTS.comments}>answer</a></li>
+                    <li><a href={ROUTS.logIn}>Explore</a></li>
                 </ul>
                 <hr />
                 <div>
                 <ul>
                     <h3>Resources</h3>
-                    <li><a href={ROUTS.about}>About</a></li>
-                    <li><a href={ROUTS.doc}>Doc</a></li>
+                    <li><a href={ROUTS.about}>About Reddit</a></li>
+                    <li><a href={ROUTS.doc}>advertise</a></li>
                     <li><a href={ROUTS.comments}>Comments</a></li>
-                    <li><a href={ROUTS.logIn}>LogIn</a></li>
+                    <li><a href={ROUTS.logIn}>Developer Platform</a></li>
+                    <li><a href={ROUTS.logIn}>Help</a></li>
                 </ul>  
                 </div>
             </div>
 
-            <div className='postSection'>
+            <div className='postContainer'>
                 <Outlet />
             </div>
            
