@@ -2,6 +2,14 @@ import React from 'react';
 import { useEffect } from 'react';
 import {useSelector,useDispatch} from 'react-redux';
 import { selectRedits, isLoading, hasError,loadingReddit } from './RedditsSlice';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { library } from '@fortawesome/fontawesome-svg-core'
+/* import all the icons in Free Solid, Free Regular, and Brands styles */
+import { fas } from '@fortawesome/free-solid-svg-icons'
+import { far } from '@fortawesome/free-regular-svg-icons'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+
+library.add(fas, far, fab)
 
 
 
@@ -19,17 +27,18 @@ const Reddits = () => {
         return <p>loading.......</p>;
     }  
 
-   if(!reddits) return;
+//    if(!reddits) return;
+    const d = new Date()
 
     return (
         <div className='redditSection'>
-            {/* {
+            {
                   reddits.map(({data})=>(
                     <div key={data.id} className='postSection'>
                         <div className='post'>
                             <div className='postTime'>
-                                <p>time</p>
-                                <div className='join'><a>join</a></div>
+                                <p>{d.toDateString()}</p>
+                                <p className='join'><a>join</a></p>
                                
                             </div>
                             <div className='img'>
@@ -41,16 +50,19 @@ const Reddits = () => {
                             </div>
                             <div className='imgIcons'>
                                 <ul>
-                                    <li>like</li>
-                                    <li>comments</li>
-                                    <li>share</li>
+                                    <li>
+                                        <FontAwesomeIcon icon="fa-regular fa-thumbs-up" />
+                                        <FontAwesomeIcon icon="fa-regular fa-thumbs-down" />
+                                    </li>
+                                    <li><FontAwesomeIcon icon="fa-regular fa-comment" /></li>
+                                    <li><FontAwesomeIcon icon="fa-solid fa-square-share-nodes" /></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 ))
                
-            } */}
+            }
         </div>
     )
 }

@@ -2,6 +2,8 @@ import {createBrowserRouter, createRoutesFromElements,RouterProvider,Route} from
 import Root from '../Root';
 import Reddits from '../features/reddit/Reddits'
 import '../App.css';
+
+
 function App() {
 
   const router = createBrowserRouter(createRoutesFromElements(

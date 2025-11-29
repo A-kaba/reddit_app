@@ -52,13 +52,14 @@ ul{
 ul li a{
  
    text-decoration: none;
+   margin-left: 15px;
 }
 
-ul li p{
+/* ul li p{
    position: relative;
    top: 3px;
    margin-right: 5px;
-}
+} */
 .postContainer{
     grid-column-start: 3;
     grid-column-end: 12;
@@ -75,12 +76,15 @@ ul li p{
 .postSection{
     /* border: 0.1em solid lightgray; */
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 
 .post{
     border-radius: 10px;
     width: 70%;
+    border-top: 0.1em solid lightgrey;
+    /* padding: 10px; */
+
 }
 .post:hover{
     background-color: whitesmoke;
@@ -89,6 +93,13 @@ ul li p{
 .postTime{
     display: flex;
     justify-content: space-between;
+    /* width: 95%; */
+}
+
+.postTitle , .postTime{
+    /* border: 1px solid; */
+    padding: 0 20px ;
+
 }
 .postTime .join a{
     background-color: darkblue;
@@ -110,6 +121,16 @@ img{
     width: 95%;
     margin: 10px;
     background-color: lightgray;
+}
+.imgIcons{
+    /* border: 1px solid; */
+    margin: 0;
+    width: 95%;
+}
+.imgIcons ul{
+    display: flex;
+    justify-content: space-between;
+
 }
 
 

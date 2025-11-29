@@ -2,6 +2,15 @@ import React from 'react';
 import { Outlet } from 'react-router-dom';
 import SearchForm from './components/SearchForm';
 import './App.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { library } from '@fortawesome/fontawesome-svg-core'
+
+/* import all the icons in Free Solid, Free Regular, and Brands styles */
+import { fas } from '@fortawesome/free-solid-svg-icons'
+import { far } from '@fortawesome/free-regular-svg-icons'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+
+library.add(fas, far, fab)
 
 
 export const ROUTS = 
@@ -33,26 +42,48 @@ const Root = () => {
 
                 <ul>
                     <li>
-                        <p className="material-symbols-outlined">home</p>
+                        <FontAwesomeIcon icon="fa-solid fa-house" />
                         <a href={ROUTS.about}>Home</a>
                     </li>
                    
             
                     <li>
+                        <FontAwesomeIcon icon="fa-solid fa-fire" />
                         <a href={ROUTS.doc}>Popular</a>
                     </li>
-                    <li><a href={ROUTS.comments}>answer</a></li>
-                    <li><a href={ROUTS.logIn}>Explore</a></li>
+                    <li>
+                        <FontAwesomeIcon icon="fa-regular fa-circle-question" />
+                        <a href={ROUTS.comments}>answer</a>
+                    </li>
+                    <li>
+                        <FontAwesomeIcon icon="fa-brands fa-wpexplorer" />
+                        <a href={ROUTS.logIn}>Explore</a>
+                    </li>
                 </ul>
                 <hr />
                 <div>
                 <ul>
                     <h3>Resources</h3>
-                    <li><a href={ROUTS.about}>About Reddit</a></li>
-                    <li><a href={ROUTS.doc}>advertise</a></li>
-                    <li><a href={ROUTS.comments}>Comments</a></li>
-                    <li><a href={ROUTS.logIn}>Developer Platform</a></li>
-                    <li><a href={ROUTS.logIn}>Help</a></li>
+                    <li>
+                        <FontAwesomeIcon icon="fa-solid fa-address-card" />
+                        <a href={ROUTS.about}>About Reddit</a>
+                    </li>
+                    <li>
+                        <FontAwesomeIcon icon="fa-solid fa-rectangle-ad" />
+                        <a href={ROUTS.doc}>advertise</a>
+                    </li>
+                    <li>
+                        <FontAwesomeIcon icon="fa-regular fa-comment" />
+                        <a href={ROUTS.comments}>Comments</a>
+                    </li>
+                    <li>
+                        <FontAwesomeIcon icon="fa-brands fa-connectdevelop" />
+                        <a href={ROUTS.logIn}>Developer Platform</a>
+                    </li>
+                    <li>
+                        <FontAwesomeIcon icon="fa-regular fa-circle-question" />
+                        <a href={ROUTS.logIn}>Help</a>
+                    </li>
                 </ul>  
                 </div>
             </div>
